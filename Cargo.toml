@@ -15,8 +15,6 @@ description = """
 peekpoke
 """
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [build-dependencies]
 bindgen = "0.64.0"
 cc = "1.0.79"
