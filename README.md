@@ -2,7 +2,7 @@
 
 [![Latest Version]][crates.io] [![Documentation]][docs.rs] ![License]
 
-_under construction..._
+A Rust library used for reading and writing to physical memory using /dev/mem.
 
 [crates.io]: https://crates.io/crates/peekpoke
 [latest version]: https://img.shields.io/crates/v/peekpoke.svg
