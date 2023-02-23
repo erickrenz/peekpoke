@@ -1,6 +1,6 @@
 [package]
 name = "peekpoke"
-version = "0.0.1"
+version = "0.1.0"
 edition = "2021"
 authors = ["Eric Krenz"]
 license = "MIT OR Apache-2.0"
@@ -10,7 +10,7 @@ homepage = "https://github.com/erickrenz/peekpoke"
 documentation = "https://docs.rs/peekpoke/"
 keywords = ["peekpoke", "devmem", "memory", "linux", "bindings"]
 categories = ["hardware-support", "memory-management", "development-tools", "embedded", "os::linux-apis"]
-# build = "build.rs"
+build = "build.rs"
 description = """
 peekpoke
 """
@@ -18,3 +18,5 @@ peekpoke
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [build-dependencies]
+bindgen = "0.64.0"
+cc = "1.0.79"
