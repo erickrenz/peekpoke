@@ -25,12 +25,12 @@ peekpoke = "0.1.0"
 
 ## Example
 ```rust
-let value = peekpoke::read(0x4000_0000);
+let value: u32 = peekpoke::read(0x4000_0000);
 println!("{:#010X}", value);
 // 0x00000000
 
 peekpoke::write(0x4000_0000, 0xFFFF_FFFF);
-let value = peekpoke::read(0x4000_0000);
+let value: u32 = peekpoke::read(0x4000_0000);
 println!("{:#010X}", value);
 // 0xFFFFFFFF
 ```
