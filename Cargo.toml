@@ -12,7 +12,7 @@ keywords = ["peekpoke", "devmem", "memory", "linux", "bindings"]
 categories = ["hardware-support", "memory-management", "development-tools", "embedded", "os::linux-apis"]
 build = "build.rs"
 description = """
-peekpoke
+peekpoke - a lightweight Rust library for accessing physical addresses using /dev/mem in Linux
 """
 
 [build-dependencies]

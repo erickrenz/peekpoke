@@ -16,7 +16,8 @@ unsigned peek(unsigned addr)
     fd = open("/dev/mem", O_RDONLY);
     if (fd < 1)
     {
-        exit(-1);
+        perror("peekpoke");
+        exit(EXIT_FAILURE);
     }
 
     page_addr = (addr & ~(page_size - 1));
@@ -25,13 +26,14 @@ unsigned peek(unsigned addr)
     ptr = mmap(NULL, page_size, PROT_READ, MAP_SHARED, fd, (addr & ~(page_size - 1)));
     if ((int)ptr == -1)
     {
-        exit(-1);
+        perror("peekpoke");
+        exit(EXIT_FAILURE);
     }
 
     return *((unsigned *)(ptr + page_offset));
 }
 
-int poke(unsigned addr, unsigned value)
+void poke(unsigned addr, unsigned value)
 {
     int fd;
     void *ptr;
@@ -41,7 +43,8 @@ int poke(unsigned addr, unsigned value)
     fd = open("/dev/mem", O_RDWR);
     if (fd < 1)
     {
-        exit(-1);
+        perror("peekpoke");
+        exit(EXIT_FAILURE);
     }
 
     page_addr = (addr & ~(page_size - 1));
@@ -50,7 +53,8 @@ int poke(unsigned addr, unsigned value)
     ptr = mmap(NULL, page_size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, (addr & ~(page_size - 1)));
     if ((int)ptr == -1)
     {
-        exit(-1);
+        perror("peekpoke");
+        exit(EXIT_FAILURE);
     }
 
     *((unsigned *)(ptr + page_offset)) = value;
