@@ -24,15 +24,15 @@ peekpoke = "0.1.0"
 ```
 
 ## Example
-```rust
-let value: u32 = peekpoke::read(0x4000_0000);
-println!("{:#010X}", value);
-// 0x00000000
 
+```rust
+// Write to address: 0x40000000 
+//   ... with value: 0xFFFFFFFF
 peekpoke::write(0x4000_0000, 0xFFFF_FFFF);
+
+// Read from address: 0x40000000
 let value: u32 = peekpoke::read(0x4000_0000);
-println!("{:#010X}", value);
-// 0xFFFFFFFF
+println!("{:#010X}", value); // 0xFFFFFFFF
 ```
 
 ## Troubleshooting
