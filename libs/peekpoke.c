@@ -58,5 +58,4 @@ void poke(unsigned addr, unsigned value)
     }
 
     *((unsigned *)(ptr + page_offset)) = value;
-    return 0;
 }
