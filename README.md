@@ -2,7 +2,7 @@
 
 [![Latest Version]][crates.io] [![Documentation]][docs.rs] ![Downloads] ![License]
 
-A lightweight Rust library used for reading and writing from physical memory using `/dev/mem`. 
+A lightweight Rust library used for reading and writing from physical memory address using `/dev/mem`. The functionality for user-space applications is similar to the `devmem` cli utility in [busybox](https://www.busybox.net/downloads/BusyBox.html#devmem).
 
 In Linux, `/dev/mem` is a character device file containing access to the physical memory in a system. This file can be used to read and write to physical addresses on the bare metal (or virtualized) hardware.
 
@@ -26,13 +26,14 @@ peekpoke = "0.1.0"
 ## Example
 
 ```rust
-// Write to address: 0x40000000 
-//   ... with value: 0xFFFFFFFF
-peekpoke::write(0x4000_0000, 0xFFFF_FFFF);
+let address: u32 = 0x4000_0000;
+let value: u32 = 0xDEAD_BEEF;
 
-// Read from address: 0x40000000
-let value: u32 = peekpoke::read(0x4000_0000);
-println!("{:#010X}", value); // 0xFFFFFFFF
+peekpoke::write(address, value);
+
+let result: u32 = peekpoke::read(address);
+
+println!("{:#010X}", result); // 0xDEAD_BEEF 
 ```
 
 ## Troubleshooting
