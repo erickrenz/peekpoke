@@ -2,11 +2,11 @@
 
 [![Latest Version]][crates.io] [![Documentation]][docs.rs] ![Downloads] ![License]
 
-A lightweight Rust library used for reading and writing from physical memory address using `/dev/mem`. The functionality for user-space applications is similar to the `devmem` cli utility in [busybox](https://www.busybox.net/downloads/BusyBox.html#devmem).
+A lightweight Rust library used for reading and writing from physical memory address using `/dev/mem`.
 
-In Linux, `/dev/mem` is a character device file containing access to the physical memory in a system. This file can be used to read and write to physical addresses on the bare metal (or virtualized) hardware.
+In Linux, `/dev/mem` is a character device file containing access to the physical memory in a system. This file can be used to read and write to physical addresses on the bare metal (or virtualized) hardware. This functionality for user-space applications is similar to the `devmem` cli utility in [busybox](https://www.busybox.net/downloads/BusyBox.html#devmem).
 
-Read the [kernel manual](https://man7.org/linux/man-pages/man4/mem.4.html) for more information.
+For more information, refer to the linux kernel [manual](https://man7.org/linux/man-pages/man4/mem.4.html).
 
 ## Requirements
 
@@ -20,7 +20,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-peekpoke = "0.1.0"
+peekpoke = "0.2.0"
 ```
 
 ## Example
