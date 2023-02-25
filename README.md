@@ -53,7 +53,7 @@ For embedded systems development, it may be useful to cross compile your app to 
 
 ## License
 
-Peekpoke is distributed under the terms of the [MIT license](https://opensource.org/licenses/MIT). See terms and conditions [here](./LICENSE-MIT)
+Peekpoke is distributed under the terms of the [MIT license](https://opensource.org/licenses/MIT). See terms and conditions [here](./LICENSE-MIT).
 
 [crates.io]: https://crates.io/crates/peekpoke
 [latest version]: https://img.shields.io/crates/v/peekpoke.svg
