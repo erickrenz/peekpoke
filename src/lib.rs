@@ -1,6 +1,6 @@
 //! # peekpoke
 //!
-//! `peekpoke` is a ightweight Rust library for accessing physical
+//! `peekpoke` is a lightweight Rust library for accessing physical
 //! memory addresses using /dev/mem in Linux systems.
 
 include!(concat!(env!("OUT_DIR"), "/bindings.rs"));
