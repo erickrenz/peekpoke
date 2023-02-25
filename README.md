@@ -49,7 +49,7 @@ The default behavior for `/dev/mem` is to return errors if the address you enter
 
 ## Cross Compiling
 
-For embedded systems development, it may be useful to cross compile your app to run on a different architecture. For more information on this process, check out this [example repo]().
+For embedded systems development, it may be useful to cross compile your app to run on a different architecture. For more information on this process, check out this example GitHub repo for Rust [cross-compiling](https://github.com/erickrenz/cross-compile).
 
 ## License
 
