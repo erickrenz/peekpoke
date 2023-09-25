@@ -20,7 +20,7 @@ Add this to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-peekpoke = "0.2.1"
+peekpoke = "0.3"
 ```
 
 ## Example
